@@ -1,3 +1,5 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
 <head>
 <title>Gaussian Processes ToolKit - R Package</title>
 </head>
@@ -9,8 +11,8 @@
 <p>This page describes examples of how to use the Gaussian Processes
 Toolkit (gptk).
 
-</br></br>
-RELEASEINFORMATION
+<p> RELEASE INFORMATION
+
 
 <h4>Version 1.08</h4>
 A few minor changes in cmpndKernExpandParam.R and cmpndKernGradient.R to fix a problem related to NULL values returned by these functions.
@@ -49,10 +51,13 @@ dimensional and is from a Gaussian with a particular covariance.
 &gt; demGpSample()
 </code>
 
-<p><center><img src="gpSample.png" width ="30%"><img
-src="gpCovariance.png" width ="30%"><br> <i>Left</i> A single, 25
-dimensional, sample from a Gaussian distribution. <i>Right</i> the
-covariance matrix of the Gaussian distribution.  </center>
+<p>
+<IMG class="displayed" src="gpSample.png" width ="30%" alt=""><IMG src="gpCovariance.png" width ="30%" alt="">
+<br>
+<i>Left</i> A single, 25 dimensional, sample from a Gaussian distribution.
+<i>Right</i> the covariance matrix of the Gaussian distribution. 
+
+
 
 
 <h3>Joint Distribution over two Variables</h3>
@@ -68,13 +73,13 @@ process, we can look at the joint distribution over two variables.
 as the conditional for <i>f</i><sub>2</sub> given
 <i>f</i><sub>1</sub>.
 
-<p><center><img src="demGpCov2D1_2.gif" width ="30%"><img
-src="demGpCov2D1_5.gif" width ="30%"><br> <i>Left</i> Blue line is
+<p><img src="demGpCov2D1_2.gif" width ="30%" alt=""><img
+src="demGpCov2D1_5.gif" width ="30%" alt=""><br> <i>Left</i> Blue line is
 contour of joint distribution over the variables <i>f</i><sub>1</sub>
 and <i>f</i><sub>2</sub>. Green line indicates an observation of
 <i>f</i><sub>1</sub>. Red line is conditional distribution of
 <i>f</i><sub>2</sub> given <i>f</i><sub>1</sub>. <i>Right</i> Similar
-for <i>f</i><sub>1</sub> and <i>f</i><sub>5</sub>.  </center>
+for <i>f</i><sub>1</sub> and <i>f</i><sub>5</sub>.
 
 
 
@@ -98,11 +103,11 @@ the range -3 to 3 on the <i>x</i>-axis. The random seed will be set to
 
 <p>is similar, but the inverse width is now set to 16 (length scale 0.25).
 
-<p><center><img src="gpSampleRbfSamples10InverseWidth1Variance1.png" width ="30%"><img
-src="gpSampleRbfSamples10InverseWidth16Variance1.png" width ="30%"><br>
+<p><img src="gpSampleRbfSamples10InverseWidth1Variance1.png" width ="30%" alt=""><img
+src="gpSampleRbfSamples10InverseWidth16Variance1.png" width ="30%" alt=""><br>
 <i>Left</i> samples from an RBF style covariance function
 with length scale 1. <i>Right</i> samples from an RBF style covariance
-function with length scale 0.25.  </center>
+function with length scale 0.25.
 
 
 <h3>Posterior Samples</h3>
@@ -111,20 +116,22 @@ function with length scale 0.25.  </center>
 
 <p><code>
 &gt; gpPosteriorSample('rbf', 5, c(1,1), c(-3,3))
+</code>
 </p>
 
 and 
 
 <p><code>
 &gt; gpPosteriorSample('rbf', 5, c(16,1), c(-3,3))
+</code>
 </p>
 
-<p><center><img
+<p><img
 src="gpPosteriorSampleRbfSamples5InverseWidth1Variance1.png" width
-="30%"><img
+="30%" alt=""><img
 src="gpPosteriorSampleRbfSamples5InverseWidth16Variance1.png" width
-="30%"><br> <i>Left</i> samples from the posterior induced by an RBF style covariance function
-with length scale 1 and 5 &quot;training&quot; data points taken from a sine wave. <i>Right</i> Similar but for a length scale of 0.25.  </center>
+="30%" alt=""><br> <i>Left</i> samples from the posterior induced by an RBF style covariance function
+with length scale 1 and 5 &quot;training&quot; data points taken from a sine wave. <i>Right</i> Similar but for a length scale of 0.25.
 
 
 
@@ -144,11 +151,11 @@ points are included. The code is run with
 &gt; demInterpolation()
 </code>
 
-<p><center><img src="demInterpolation.gif" width ="30%"><br>
+<p><img src="demInterpolation.gif" width ="30%" alt=""><br>
 
 Gaussian process prediction after one/three/seven/ points with a new
 data point sampled and after the new data points are included
-in the prediction.<br></center>
+in the prediction.<br>
 
 <h3>Simple Regression Demo</h3>
 
@@ -164,11 +171,11 @@ The code is run with
 </code>
 
 
-<p><center><img src="demRegression.gif" width ="30%"><br>
+<p><img src="demRegression.gif" width ="30%" alt=""><br>
 
 Gaussian process prediction after one/three/seven/ points with a new
 data point sampled and after the new data points are included
-in the prediction.<br></center>
+in the prediction.<br>
 
 <h3>Optimizing Hyper Parameters</h3>
 
@@ -186,7 +193,7 @@ corresponding plot of the log likelihood. The log likelihood peaks for
 a length scale close to 1. This was the length scale used to generate
 the data.
 
-<p><center><img src="demOptimiseGp1.gif" width ="30%"> <img src="demOptimiseGp2.gif" width ="30%">
+<p><img src="demOptimiseGp1.gif" width ="30%" alt=""> <img src="demOptimiseGp2.gif" width ="30%" alt="">
 
 <br><i>Left</i> Gaussian process regression applied to the data with an increasing length scale. The
 length scales used were 0.05, 0.1, 0.25, 0.5, 1, 2, 4, 8 and
@@ -197,7 +204,9 @@ a data fit term (the quadratic form) shown by a green line and a
 complexity term (the log determinant) shown by a red line. The data
 fit is larger for short length scales, the complexity is larger for
 long length scales. The combination leads to a maximum around the true
-length scale value of 1.</center>
+length scale value of 1.
 
 </div>
 </body>
+
+</html>
