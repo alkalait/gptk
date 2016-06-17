@@ -3,5 +3,4 @@ gptk
 
 Gaussian processes tool-kit: An R package for GP regression.
 
-See also:
-- gprege
+See also [gprege](https://github.com/alkalait/gprege).
