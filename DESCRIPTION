@@ -1,14 +1,14 @@
 Package: gptk
-Version: 1.08
-Date: 2014-03-07
+Version: 1.09
+Date: 2020-03-02
 Title: Gaussian Processes Tool-Kit
 Author: Alfredo Kalaitzis <alkalait@gmail.com>,
-	Antti Honkela <antti.honkela@tkk.fi>,
+	Antti Honkela <antti.honkela@helsinki.fi>,
 	Pei Gao <pg349@medschl.cam.ac.uk>,
 	Neil D. Lawrence <N.Lawrence@dcs.shef.ac.uk>
 Maintainer: Alfredo Kalaitzis <alkalait@gmail.com>
 Depends: R (>= 2.8.0), Matrix, fields
-Imports: 
+Imports: Biobase, methods
 Suggests: spam
 Description: The gptk package implements a general-purpose toolkit for Gaussian
   process regression with a variety of covariance functions (e.g. RBF, Mattern, polynomial, etc).
