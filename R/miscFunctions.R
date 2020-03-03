@@ -184,7 +184,7 @@ boundedTransform <- function (x, transform="atox", bounds) {
 
   invCh <- try (solve( Ch, eyeM ), silent=TRUE)
 
-  if ( class(invCh) == "try-error" ) {
+  if ( "try-error" %in% class(invCh) ) {
     return (NaN)
   }
   else {
